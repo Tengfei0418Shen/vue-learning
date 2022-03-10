@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3-todolist组件化</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+
+    
+    
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    // mvvm vue实例 vue组件
+    const app = Vue.createApp({
+        data() {
+            return {
+                inputValue: '',
+                list1: [],
+                list: [{src:"imgs/OIP-C.jfif",alt:"picture1"},
+                {src:"imgs/OIP-C (1).jfif",alt:"picture"}],
+
+            }
+        },
+        methods: {
+            handleAddItem(){
+                this.list.push(this.inputValue);
+                this.inputValue = "";
+            }
+        },
+        template:`
+        <div>
+        <input type="text" v-model="inputValue">
+        <button v-on:click="handleAddItem" v-bind:title="inputValue">添加</button>
+        <ul>
+            <todo-item v-for="(item,index) of list1" v-bind:content="item" v-bind:index="index" />
+        </ul>
+        <todo-imgs v-for="(item,index) of list" v-bind:src="item.src" v-bind:alt="item.alt" />
+    </div>
+        `
+    });
+    app.component('todo-item',{
+        props: ['content','index'],
+        template: '<li>{{index}}-----{{content}}</li>'
+    })
+
+    app.component('todo-imgs',{
+        props: ['src','alt'],
+        template: '<img :src="src" :alt="alt">'
+        // template: '<li>{{src}}-----{{alt}}</li>'
+    })
+
+    app.mount('#app')
+  </script>
+</html>
