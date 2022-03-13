@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app{
+            width: 80vw;
+            height: 100vw;
+            margin: 0 auto;
+            background-color: rgb(87, 224, 183);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <input type="text" >
+        <div id="app" @keydown="moveLeft($event)">
+            <div id="box"></div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                link: "https://www.baidu.com",
+                pg: 0
+            }
+        },
+        methods: {
+            moveLeft(e) {
+                console.log(e);
+                this.pg -= 50;
+                this.$refs.box.style.left = this.pg + "px"
+            },
+        },
+        // template: `<h2>{{message}}</h2>`
+    })
+
+    var vm = app.mount("#root")
+</script>
+</html>

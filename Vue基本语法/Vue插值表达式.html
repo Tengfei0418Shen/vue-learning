@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+        <!-- 用插值直接显示变量 -->
+        <h2>{{firstName}} {{lastName}} {{age}}岁</h2>
+        <!-- 使用.访问变量的属性 -->
+        <p>{{firstName.length}}</p>
+        <!-- 字符串的拼接 -->
+        <p>{{firstName + "~~~~~~~~~" + lastName}}</p>
+        <!-- 简单的算术运算 -->
+        <p>{{count * 2}}</p>
+        <!-- 三目运算 -->
+        <p>{{firstName==="aa"?"ok":"no"}}</p>
+        <!-- 调用自定义函数 -->
+        <p>{{customMethod(firstName)}}</p>
+        <!-- 调用js函数生成10以内的随机数 -->
+        <p>{{getRandom()}}</p>
+
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                firstName: "spring",
+                lastName: "boot",
+                count: 10,
+                age: 11
+            }
+        },
+        methods: {
+            customMethod(str) {
+                return str.split("").reverse().join(",")
+            },
+            getRandom(){
+                return Math.floor(Math.random() * 10);
+            }
+        },
+        // template: `<h2>{{message}}</h2>`
+    })
+
+    var vm = app.mount("#root")
+  </script>
+</html>
