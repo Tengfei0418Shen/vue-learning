@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绑定style属性</title>
+    <style>
+        /* body{
+            background-color: #fff;
+        } */
+        .a{
+            width: 2000px;
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body >
+    <div id="app">
+        <div class="a" :style="{'background-color':bgColor}">
+<button @click="changeColor()" >换肤</button>
+        </div>
+        <!-- <h2 :style="{'color':'red','font-size': fontSize+'px', 'background-color':bgColor}">
+            绑定style属性
+        </h2> -->
+        <!-- <button @click="this.fontSize+=20">增大字体</button> -->
+        
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        let app = Vue.createApp({
+            data() {
+                return {
+                    fontSize: 20,
+            
+                    bgColor: 'white'
+                };
+            },
+            methods: {
+                changeColor() {
+                    if(this.bgColor=='white'){
+                        this.bgColor='black'
+                    }else{
+                        this.bgColor='white'
+                    }
+                }
+            },
+        });
+        let vm = app.mount('#app');
+    </script>
+</body>
+
+<html>

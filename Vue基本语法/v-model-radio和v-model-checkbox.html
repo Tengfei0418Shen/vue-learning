@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 单选按钮 -->
+        <h2>选择性别</h2>
+        <h3>你的选择是:{{gender}}</h3>
+
+        <label for="male">        <input type="radio" name="" id="male" value="男" v-model="gender" checked>男</label>
+
+        <label for="female">        <input type="radio" name="" id="female" value="女" v-model="gender">女</label>
+
+        <hr>
+        <!-- 复选框 -->
+        <h2>选择技术栈</h2>
+        <h3>你的选择是:{{checks}}</h3>
+        
+        <label for="Spring"><input type="checkbox" name="" id="Spring" value="Spring" v-model="checks" checked>Spring
+        </label>
+        <label for="Vue"><input type="checkbox" name="" id="Vue" value="Vue" v-model="checks">Vue</label>
+        <input type="submit" value="提交" @click="submit()" :disabled="isNotNone"> 
+        <!-- {{isNotNone?disabled:null}} -->
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        let app = Vue.createApp({
+            data() {
+            return {
+                gender: '男',
+                checks: ['Spring'],
+                isNotNone: false
+            };
+            },
+            created() {
+                
+            },
+            mounted() {
+                
+            },
+            methods: {
+                submit() {
+                   alert(this.checks+this.gender)
+                }
+            },
+            updated() {
+                if(this.checks.length){
+                    this.isNotNone=false   
+                }else{
+                    this.isNotNone=true
+                }
+            }
+        });
+        let vm = app.mount('#app');
+    </script>
+</body>
+
+<html>

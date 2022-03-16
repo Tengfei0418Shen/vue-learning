@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue3实现todolist----了解循环和双向绑定</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .green {
+        color: green;
+      }
+      .addLine{
+        text-decoration-line: line-through;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    Vue.createApp({
+      data() {
+        return {
+          inputValue: "",
+          list: [
+            {title: "aaa",finished: false},
+            {title: "bbb",finished: true},
+          ],
+        };
+      },
+      methods: {
+        handleAddItem() {
+          this.list.push({title:this.inputValue,finished:false});
+          this.inputValue = "";
+        },
+        removeItem(index) {
+          this.list.removeItem(index);
+        },
+        changeLine(index) {
+          this.list[index].finished = !this.list[index].finished
+        }
+      },
+      template: `
+        <div>
+        <input type="text" v-model="inputValue">
+        <button v-on:click="handleAddItem">添加</button>
+        <ul>
+            <li v-for="(item,index) of list" :class="{addLine:item.finished}" @click="changeLine(index)">
+                
+                {{item.title}}
+                
+            </li>
+        </ul>
+    </div>
+        `,
+    }).mount("#app");
+  </script>
+</html>
