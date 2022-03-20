@@ -1,0 +1,2358 @@
+
+.main-head-box {
+    /* padding:30px 0 50px; */
+    /* overflow:hidden; */
+    line-height:40px;
+    height: 120px;
+}
+.found-icon {
+    width:40px;
+    height:40px;
+    background-image:url(../images/icon-found.png);
+    margin-right:250px;
+    float:left;
+    cursor:pointer;
+    margin-top: 40px;
+}
+.hover-found-box {
+    display:none;
+    /* width:115px;
+    height:88px; */
+    width: 108px;
+    height: 80px;
+    background-image:url(../images/hover-found.png?t=20191022);
+    position: absolute;
+    left: 45px;
+    top: 20px;
+    z-index: 2;
+    background-size: 100% 100%;
+}
+#add-join-cc {
+    padding: 10px 2.5px 10px 9px;
+}
+#add-join-cc a {
+    display: block;
+    height:30px;
+    font-size:14px;
+    color:#333;
+    line-height:30px;
+    text-align:center;
+    text-decoration: none;
+}
+#add-join-cc a:hover {
+    background:#F0F0F0;
+}
+.search-box {
+    position: relative;
+    display:block;
+    float:left;
+    margin-top: 42px;
+}
+.search-box input {
+    background: #FFF;
+    width: 400px;
+}
+.search-box .search-history{
+    display: none;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    z-index: 1;
+    padding: 10px 0px;
+    width: 324px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+}
+.search-box .search-history p{
+    line-height: 20px;
+    padding: 0 10px;
+    color: #666;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.search-box .search-history p[data-status=N] {
+    display: none;
+}
+.search-box .search-history p:hover{
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+.show-closed-clazzcourse {
+    float:right;
+    font-size:16px;
+}
+#show-closed-clazzcourse-button {
+    cursor: pointer;
+    display: inline-block;
+    width:13px;
+}
+.show-closed-clazzcourse i, .show-closed-clazzcourse span {
+    vertical-align:middle;
+}
+#open-clazzcourse-list-box {
+    margin-bottom:80px;
+}
+.bright-line {
+    padding-bottom:10px;
+    border-bottom:solid 1px #E1E1E1;
+    overflow:hidden;
+}
+.bright-title {
+    float:left;
+    font-size:14px;
+    color:#333;
+}
+.bright-title-right {
+    float:right;
+    font-size:12px;
+    color:#666;
+}
+.bright-line-blue {
+    width:90px;
+    height:1px;
+    background:#00BBDD;
+    margin-top:-1px;
+}
+.show-clazzcourse-list {
+    margin:20px 0 0 0;
+}
+.clazzcourse-list-row {
+    cursor: pointer;
+    width:222px;
+    height:322px;
+    background:#FFF;
+    display:block;
+    float:left;
+    margin:0 20px 40px 0;
+    padding:4px;
+}
+a.clazzcourse-list-row:hover {
+    text-decoration: none;
+}
+#closed-clazzcourse-list-box {
+    margin-bottom:80px;
+}
+.img-gray {
+    filter: grayscale(100%);
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -webkit-filter: gray;
+    -moz-filter: gray;
+    -ms-filter: gray;
+}
+
+.clazzcourse-list-row .front-cover-box {
+    width:222px;
+    height:222px;
+    overflow:hidden;
+}
+.clazzcourse-list-row .front-cover {
+    width:222px;
+    height:222px;
+}
+#open-clazzcourse-list-box .front-cover-box:hover > .front-cover {
+    transform: scale(1.2, 1.2);
+    transition: 4s transform linear;
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -webkit-transition: 4s transform linear;
+    -moz-transition: 4s transform linear;
+    -ms-transition: 4s transform linear;
+}
+.my-course {
+    position: relative;
+    top:-227px;
+    left:155px;
+}
+.clazzcourse-list-row .clazzcourse-name {
+    padding:20px 0 0 10px;
+    font-size:14px;
+    color:#333;
+    width: 202px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.clazzcourse-list-row .faculty-name {
+    padding:5px 0px 5px 10px;
+    font-size:12px;
+    color:#666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.clazzcourse-list-row .teacher-info {
+    padding:0 10px;
+    line-height:30px;
+    color:#00BBDD;
+}
+.clazzcourse-list-row .teacher-photo {
+     width:30px;;
+     height:30px;
+     float:left;
+     margin-right:5px;
+     border-radius:50%;
+}
+#clazzcourse-null {
+    width:574px;
+    margin: 0 auto;
+    margin-top:130px;
+    overflow: hidden;
+    text-align: center;
+}
+.create-hint {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    background-color: #0bd;
+    width: 258px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.15);
+}
+.create-hint-triangle {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    border-bottom: 18px solid #0bd;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+}
+.create-hint-triangle span {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    border-bottom: 18px solid #f4f4f4;
+    border-left: 0px solid transparent;
+    border-right: 10px solid transparent;
+}
+#add-clazzcourse {
+    float:right;
+    text-align: center;
+}
+.prompt-text {
+    font-size:14px;
+    color:#333;
+    line-height:150%;
+    padding:23px 0px;
+}
+#add-clazzcourse .create-clazzcourse {
+    margin-right: 20px;
+}
+
+.search-button i {
+    line-height:30px;
+    margin-right: 0px;
+}
+.margin-r-0 {
+    margin-right:0px;
+}
+#search-data-empty {
+    display: none;
+    width:100%;
+    margin-top:100px;
+    text-align: center;
+    color:#666;
+}
+#add-clazzcourse a {
+    display: inline-block;
+    width:90px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color:#0BD;
+    border:1px solid #0BD;
+    border-radius: 4px;
+}
+#add-clazzcourse a:hover {
+    opacity: 0.8;
+}
+#create-cc-box {
+  padding:50px 190px 30px;
+  background-color:#FFF;
+  margin-bottom: 30px;
+}
+#select-file {
+    cursor: pointer;
+    width: 96px;
+    height: 96px;
+    border: dashed 2px #CCC;
+    margin: 0 auto 8px;
+    text-align: center;
+    line-height: 100px;
+}
+.select-file-des {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666666;
+}
+#select-file .icon-plus {
+    color:#CCC;
+    font-size:30px;
+    line-height: inherit;
+    margin-right: 0px;
+}
+#jcrop-preview {
+    display: none;
+    width:100px;
+    height:100px;
+    margin-top: 8px;
+    margin-bottom:50px;
+    text-align: center;
+    line-height: 100px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 8px;
+}
+#jcrop-edit {
+    position: absolute;;
+    top:100px;
+    left:0px;
+    width:100%;
+    height:20px;
+    line-height: 20px;
+    color:#FFF;
+    background-color: rgba(0,0,0,0.7);
+    cursor: pointer;
+}
+.horizontal-line {
+    width:100%;
+    height:1px;
+    background-color: #CCC;
+}
+.expand-more {
+    position: relative;
+    background-color: #FFF;
+    color:#00BBDD;
+    font-size:12px;
+    padding:3px 10px;
+    top:-10px;
+    cursor: pointer;
+}
+.expand-more.icon-down:after {
+    font-family: FontAwesome;
+    content: "  \f103";
+    font-size:14px;
+}
+.expand-more.icon-up:after {
+    font-family: FontAwesome;
+    content: "  \f102";
+    font-size:14px;
+}
+#school-input-box {
+    margin-bottom: 25px;
+}
+#school-input {
+    margin-bottom:8px;
+    background-image: none;
+}
+.school-title::after {
+    content: " * ";
+    font-family: "宋体", SimSun, serif;
+    color: red;
+}
+.department-title::after {
+    content: " * ";
+    font-family: "宋体", SimSun, serif;
+    color: red;
+}
+#optional-items-box {
+    margin-top: 30px;
+}
+#digital-textbooks {
+    height:100px;
+    margin-top:8px;
+    margin-bottom: 25px;
+}
+#digital-textbooks img {
+    vertical-align: bottom;
+}
+#digital-textbooks button {
+    vertical-align: bottom;
+    margin-left:20px;
+}
+#button-box {
+    text-align: center;
+    margin-top:50px;
+}
+#optional-items-box {
+    display:none;
+}
+#departments-input {
+    margin-bottom: 25px;
+}
+#course-input,#class-box,#semester,#find-school,#department {
+    margin-bottom: 20px;
+}
+#find-school{
+    display: inline-block;
+    cursor: pointer;
+}
+#school {
+    margin-bottom: 5px;
+}
+
+/*加入班课*/
+.join-cc-box {
+    background-color: #FFF;
+    padding:70px 290px 30px;
+    text-align: center;
+    font-size: 14px;
+    color:#333;
+}
+#join-cc-second-step {
+    display: none;
+}
+#invitation-code {
+    margin: 50px 0 30px;
+    width:388px;
+    height:30px;
+}
+#slider-box {
+    text-align: left;
+    margin-bottom: 50px;
+    line-height: 34px;
+}
+#slider-box span:nth-child(1) {
+    vertical-align: middle;
+    font-size: 14px;
+    /* color:#666; */
+}
+#validate {
+    display: inline-block;
+    /* margin-left: 42px; */
+    float: right;
+    vertical-align: middle;
+}
+#find-cc {
+    margin-right:15px;
+}
+
+#cc-info-box {
+    width:298px;
+    height:148px;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    position: relative;
+}
+#join-cc-second-step .front-cover {
+    width:110px;
+    height:110px;
+    float:left;
+    margin:20px 20px 0 20px;
+}
+#cc-info {
+    text-align: left;
+    float:left;
+    margin-top: 20px;
+    font-size: 12px;
+    color:#666;
+    width: 130px;
+}
+#cc-info li {
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+#cc-info .cc-name {
+    font-size:14px;
+    color:#333;
+}
+#cc-info .cc-faculty-name {
+    margin-bottom: 15px;
+}
+#cc-info .cc-school-name {
+    max-width: 128px;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#cc-info .cc-clazz-name {
+    max-width: 130px;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#join-cc-button {
+    margin-right:15px;
+}
+#course-status-icon {
+    position: absolute;
+    left:236px;
+    top:-1px;
+}
+#join-course-form {
+    width:300px;
+    margin: 0 auto;
+}
+#join-course-form label {
+    text-align: left;
+    margin-top:20px;
+}
+#join-course-form input {
+    width:288px;
+    margin: 0;
+}
+#join-cc-button {
+    margin-top: 50px;
+}
+
+/*设置班课封面*/
+#img-box {
+    display: none;
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:rgba(000,000,000,0.5);
+    z-index:9999;
+}
+#cut-img-box {
+    position: relative;
+    width:400px;
+    height:500px;
+    margin:0 auto;
+    background-color:#FFF;
+    border-radius: 4px;
+}
+#cut-img-title {
+    height:39px;
+    line-height: 40px;
+    border-bottom: 1px solid #CCC;
+    font-size: 14px;
+    color:#666;
+    padding:0 20px;
+}
+#cut-img-title .close-img {
+    float:right;
+    margin-top:14px;
+    cursor: pointer;
+}
+.jcrop-holder {
+    margin: 0 auto;
+}
+#cut-img-buttons {
+    height:48px;
+    /*line-height: 60px;*/
+    padding-top: 12px;
+    text-align: right;
+    padding-right: 20px;
+    background-color: #F0F0F0;
+    border-radius:  0 0 4px 4px;
+}
+#button-use {
+    margin-right:15px;
+}
+#button-create {
+    margin-right:10px;
+}
+.empty-school {
+    height:60px;
+    line-height: 60px;
+    text-align: center;
+    color:#666;
+}
+#digital-textbooks-box {
+    display: none;
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:rgba(000,000,000,0.5);
+    z-index:9999;
+}
+#digital-textbooks-main {
+    position: relative;
+    width:501px;
+    height:601px;
+    margin:0 auto;
+    background-color:#FFF;
+    border-radius: 4px;
+    font-size: 14px;
+    color:#333;
+}
+#digital-textbooks-title {
+    height:49px;
+    line-height: 50px;
+    border-bottom: 1px solid #CCC;
+    padding:0 20px;
+}
+#search-input-box {
+    display: inline-block;
+    width:298px;
+    height:28px;
+    line-height: 30px;
+    border-radius: 4px;
+    margin-left: 10px;
+    border:1px solid #CCC;
+    vertical-align: middle;
+}
+#search-digital-textbooks {
+    border:none;
+    width:255px;
+    height:29px;
+    margin-top:-3px;
+}
+#search-input-box .icon-search {
+    color:#CCC;
+    font-size:20px;
+}
+#digital-textbooks-box .close-img {
+    float:right;
+    margin-top:19px;
+    cursor: pointer;
+}
+#digital-textbooks-info {
+    height:491px;
+    overflow-y: auto;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+}
+#digital-textbooks-button-box {
+    height:45px;
+    background-color:#F0F0F0;
+    /*line-height: 60px;*/
+    padding-top: 15px;
+    text-align: right;
+    padding-right: 20px;
+    border-radius: 0 0 4px 4px;
+}
+.books-type {
+    height:40px;
+    line-height: 40px;
+    padding-left: 20px;
+    border-bottom: 1px solid #CCC;
+    color:#333;
+}
+
+.books-info {
+    height: 100px;
+    padding:10px 20px;
+    border-bottom: 1px solid #CCC;
+    font-size:12px;
+}
+.books-name {
+    display:inline-block;
+    height:100px;
+    margin-left:20px;
+    color:#666;
+    margin-top: -1px;
+}
+.books-info:hover {
+    background-color:#E5F8FC;
+}
+.books-selected {
+    background-image: url(../images/icon-selected.png);
+    background-repeat: no-repeat;
+    background-position: center right 30px;
+}
+#empty-books {
+    display: none;
+    height:491px;
+    line-height: 491px;
+    text-align: center;
+    font-size:12px;
+    color:#666;
+}
+
+/*申请创建学校*/
+#request-school-first {
+    width:740px;
+    height:390px;
+    padding:30px 120px;
+    background-color: #FFF;
+}
+#schedule-box {
+    position: relative;
+    height:59px;
+    margin-bottom: 50px;
+}
+.schedule-icon-box {
+    position: absolute;
+    color:#CCC;
+    font-size: 14px;
+    z-index: 1;
+}
+.schedule-icon-box .schedule-icon-num {
+    width: 26px;
+    height:26px;
+    line-height: 27px;
+    border-radius: 50%;
+    border: 2px solid #CCC;
+    font-size: 18px;
+    color:#CCC;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #FFF;
+}
+.schedule-icon-box .current {
+    border-color: #00BBDD;
+    color:#00BBDD;
+    background-color: #FFF;
+}
+.schedule-icon-box .schedule-ok {
+    color:#FFF;
+    background-color: #00BBDD;
+    border-color: #00BBDD;
+}
+#schedule-box .horizontal {
+    width: 300px;
+    height: 10px;
+    background-color: #CCC;
+    position: relative;
+    top: 10px;
+    left: 64px;
+}
+#schedule-box .horizontal.horizontal-ok {
+    background: #00BBDD;
+}
+#school-info-box {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    color:#333;
+}
+#school-info-box label{
+    padding-bottom:5px;
+}
+#school-info-box input {
+    width:388px;
+    margin:0;
+}
+#administrative-division {
+    width:400px;
+}
+#request_school_next_button {
+    margin:50px 15px 0 0;
+}
+#message-text {
+    margin-top:132px;
+    text-align: center;
+    color:#333;
+    font-size: 14px;
+}
+#request-button-box {
+    text-align: left;
+    margin-top:95px;
+}
+#page-up {
+    margin-right:63px;
+}
+#create-botton {
+    width:130px;
+    padding:0px;
+    margin-top:90px;
+}
+
+/*班课详情*/
+#cc-info-content {
+    padding:20px 20px 50px;
+    color:#333;
+}
+.div-title {
+    font-size:14px;
+    color:#333;
+    height:39px;
+    line-height: 39px;
+    border-bottom: 1px solid #E1E1E1;
+    margin-bottom: 30px;
+}
+.div-title i {
+    float: right;
+    font-size:16px;
+    margin-top: 12px;
+}
+.div-title i[data-enable="N"] {
+    color: #DDD;
+}
+.div-title i[data-enable="Y"] {
+    cursor: pointer;
+    color:#888;
+}
+.div-title i[data-enable="Y"]:hover {
+    color:#0BD;
+}
+#cc-main #cc-info-content img {
+    float: left;
+    width:100px;
+    height:100px;
+}
+#cc-main #cc-info-content .edit-class-info img {
+    float: none;
+    width: 90px;
+    height: 90px;
+    margin-top: 42px;
+}
+.detail-info-box pre{
+    white-space: pre-wrap;
+}
+.detail-info-box {
+    /*position: relative;*/
+    /*padding:0 60px;*/
+    word-break: break-all;
+    padding-left: 60px;
+    margin-bottom: 50px;
+}
+.detail-info-box img, div {
+    /*vertical-align: middle;*/
+}
+.detail-info-box button {
+    margin-right: 20px;
+}
+.detail-info-box textarea {
+    padding:15px 11px;
+    width: 796px;
+    height:80px;
+}
+.detail-info-box .options-box {
+    display:none;
+    position: absolute;
+    border: 1px solid #ccc;
+    /*top: 30px;*/
+    left: 40px;
+    background-color: white;
+    width: 317px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.detail-info-box .option-school{
+    top:30px;
+}
+.detail-info-box .option-department{
+    top:70px;
+}
+.detail-info-box .options-box li {
+    cursor: pointer;
+    list-style: none;
+    height:30px;
+    line-height: 30px;
+    padding-left:10px;
+    color:#646464;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.detail-info-box .options-box li:hover {
+    background-color: #F0F0F0;
+}
+.vertical-line {
+    position: relative;
+    left: 30px;
+    display: inline-block;
+    width: 1px;
+    height: 100px;
+    background-color: #E1E1E1;
+    margin: 0 0px;
+}
+.cc-status {
+    display:inline-block;
+}
+.cc-status i {
+    font-size:16px;
+    color:#888;
+    cursor: pointer;
+}
+.cc-status i, span {
+    /* vertical-align: middle; */
+}
+
+.cc-status .icon-ok-circle {
+    color:#0BD;
+}
+.detail-join[data-enable="N"] .cc-status i{
+    color: #DDD;
+}
+.detail-join[data-enable="N"] .cc-status span{
+    color: #DDD;
+}
+.basis_information {
+    max-width: 450px;
+    margin-top: 10px;
+}
+.basis_information span{
+    min-width: 40px;
+    line-height: 15px;
+    float: left;
+}
+.basis_information input {
+    width: 308px;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 15px;
+    border-color: #CCC;
+}
+.basis_information .school_name,
+.basis_information .department_name,
+.basis_information .clazz_name,
+.basis_information .course_name,
+.basis_information .term_type {
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.edit-basic-information > div{
+    margin-bottom: 10px;
+    position: relative;
+}
+.edit-basic-information > div > input{
+    color: #333;
+    padding: 0px;
+    text-indent: 1em;
+    width: 400px;
+    height: 28px;
+    margin-left: 15px;
+    padding-right: 31px;
+    box-sizing: border-box;
+}
+.invitation_code {
+    float: right;
+    width: 220px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    margin-top: 20px;
+    color: #646464;    
+}
+.invitation_code span:nth-child(1) {
+    font-size: 24px;
+}
+.invitation_code span:nth-child(3) {
+    font-size: 12px;
+}
+.school-information{
+    float: left;
+    /*border-left: 1px solid #e1e1e1;*/
+    /*padding-left: 50px;
+    margin-left: 50px;*/
+}
+.edit-school-button{
+    padding: 30px 0px 0px 40px;
+}
+.data-list {
+    z-index: 1;
+    display: none;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 400px;
+    position: absolute;
+    left: 42px;
+    color: #666;
+    padding: 8px 0px;
+}
+.school-list .not-found-school {
+    display: none;
+    white-space: nowrap;
+    line-height: 22px;
+    text-align: center;
+}
+.school-list .not-found-school div {
+    display: table-cell;
+}
+.school-list .not-found-school .user-input-school {
+    max-width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.school-list .not-found-school .click-to-apply {
+    color: #0bd;
+}
+.data-list .li:hover {
+    background-color: #e1e1e1;
+}
+.data-list .li[data-visiable="Y"] {
+    display: block;
+}
+.school-list .not-found-school .click-to-apply:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.data-list .li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 8px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+
+.edit-cc-cover-button {
+    display: none;
+    width: 90px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    color: #FFF;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 108px;
+    left:65px;
+    cursor: pointer;
+}
+
+/*班课列表 用户协议弹窗*/
+#agreement-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+#agreement-box {
+    width: 500px;
+    height: 480px;
+    background-color: #FFF;
+    border-radius: 4px;
+    position: relative;
+    margin: 0 auto;
+}
+.agreement-box-title {
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    font-size: 14px;
+    padding: 0 20px;
+    border-bottom: 1px solid #E1E1E1;
+}
+.close-agreement {
+    display: inline-block;
+    float: right;
+    margin-top: 19px;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/icon-close-normal.png);
+    cursor: pointer;
+}
+.close-agreement:hover {
+    background-image: url(../images/icon-close-hover.png);
+}
+#agreement-box button{
+    line-height: 28px;
+}
+.accept-agreement-button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #888;
+}
+.accept-agreement-button[data-status=Y] {
+    color: #0BD;
+}
+
+
+/*创建班课时，申请添加学校弹窗 css*/
+#add-school-box-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#add-school-box {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #FFF;
+}
+.add-school-box-title {
+    height: 39px;
+    line-height: 39px;
+    padding: 0 20px;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #E1E1E1;
+}
+.add-school-box-title .close-add-school {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    float: right;
+    margin-top: 14px;
+    cursor: pointer;
+    background-image: url(../images/icon-close-normal.png);
+}
+.add-school-box-title .close-add-school:hover {
+    background-image: url(../images/icon-close-hover.png);
+}
+#last-step-button {
+    display: none;
+}
+.second-step {
+    display: none;
+    text-align: center;
+    padding: 0 20px;
+    color: #333;
+}
+.already-exist-school {
+    display: none;
+    padding: 100px 20px 0;
+    text-align: center;
+    color: #333;
+}
+.already-exist-school .name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.third-step {
+    display: none;
+    line-height: 20px;
+    padding: 80px 40px 0;
+    color: #333;
+    text-align: center;
+}
+/* 选择角色的弹窗 */
+.select-role-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(000,000,000,0.4);
+    z-index: 99999;
+    top: 0px;
+    left: 0px;
+}
+.select-role-box {
+    position: fixed;
+    width: 400px;
+    border-radius: 3px;
+    background: #FFF;
+    left: 50%;
+    top: 50%;
+    margin: -77px 0px 0px -200px;
+}
+.select-role-title {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px 0px 20px;
+    border-bottom: solid 1px #CCC;
+    color: #333;
+    font-size: 14px;
+}
+.select-role-content {
+    padding: 20px 20px 15px;
+    background: #FFF;
+    border-radius: 3px;
+}
+.select-role-content .msg-content {
+    margin-bottom: 30px;
+    font-size: 12px;
+    color: #666;
+    line-height: 21px;
+    word-break: break-all;
+}
+.select-role-box .tips-button-box {
+
+}
+.select-role-box .tips-button-box > .button-sure {
+    float: left;
+    padding: 0px 8px;
+    margin-right: 12px;
+    margin-bottom:15px;
+}
+.select-role-box .tips-button-box > .button-sure:nth-child(2){
+    margin-right:0;
+}
+.select-role-box .tips-button-box button:nth-child(3){
+    float: right;
+}
+/* 创建、编辑班课  学校要求等文字长度说明 */
+.textarea-word-number-limit-hint {
+    margin-bottom: 20px;
+    color: #666;
+}
+/*阿里云滑块验证样式修改*/
+._nc .stage1 {
+    height: 34px !important;
+    position: relative;
+}
+
+._nc .stage {
+    position: relative;
+    padding: 0 15px !important;
+}
+
+._nc .stage1 .slider {
+    position: absolute;
+    height: 34px !important;
+    box-shadow: 0 0 3px #999;
+    background-color: #ddd;
+    left: 0px !important;
+    right: 0px !important;
+}
+._nc .stage1 .track div, ._nc .stage1 .label {
+    line-height: 34px !important;
+    height: 34px !important;
+    text-align: center;
+    font-size: 16px;
+}
+._nc .stage1 .button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52px;
+    height: 34px !important;
+    background-color: #fff;
+    cursor: pointer;
+}
+/*手机端加入班课页面阿里云滑块验证清除浮动样式*/
+.clear-float-slider {
+    clear:both;
+    height:0;
+    line-height:0;
+    font-sizing:0;
+}
+
+
+.pop-tips-box .tips-ok-disable{
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    color: #CCCCCC;
+}
+.pop-tips-box .tips-ok-disable:hover{
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* 身份弹窗start */
+.pop-iden{
+    width: 340px!important;
+}
+.pop-iden .msg-title{
+    height: 48px;
+    line-height: 48px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+}
+.pop-iden .iden-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: PingFangSC-Medium;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0 rgba(0,187,221,0.10);
+    border-radius: 8px;
+}
+.pop-iden .tea-tab{
+    margin-bottom: 20px;
+    color: #323232;
+}
+.pop-iden .iden-tab span{
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+.pop-iden .iden-tab img{
+    width: 140px;
+    height: 100%;
+}
+.pop-iden .iden-tab:hover{
+    border: 1px solid #00BBDD;
+}
+.pop-iden .iden-tab-active{
+    color: #00BBDD;
+    border: 1px solid #00BBDD;
+}
+.pop-iden .tips-cancel,
+.pop-iden .tips-ok{
+    width: 80px;
+    height: 32px;
+}
+/* 身份弹窗end */
+
+/* 新版 */
+#header-box {
+    overflow: hidden;
+}
+/* 顶部输入框start */
+.search-box input[name=search] {
+    position: relative;
+    z-index: 9;
+    background-image: url(../images/index_search_icon_search.png);
+    background-position: 89px center;
+    background-repeat: no-repeat;
+    background-size: 17px 34px;
+    font-size: 14px;
+    padding-left: 113px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 400px;
+    padding-right: 37px;
+}
+.search-box-close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    right: 8px;
+    z-index: 10;
+    display: none;
+}
+.down-box {
+    position: absolute;
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #333333;
+    line-height: 36px;
+    z-index: 10;
+    /* height: 36px; */
+    cursor: pointer;
+}
+
+.down-box-select{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.down-box ul {
+    display: none;
+}
+.down-box ul li:hover {
+    background-color:rgba(0,187,221,0.05);
+}
+
+.down-box .down-box-select::before {
+    right: -4px;
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    border: 5px solid transparent;
+    border-top-color: #666;
+    transform-origin: 5px 3px;
+    transition: 0.3s all;
+}
+.down-box-hover  .down-box-select::before {
+    transform: rotate(180deg);
+}
+.down-box-hover {
+    /* border-top:1px solid #00BBDD; */
+    border-left:1px solid #00BBDD;
+    border-bottom:1px solid #00BBDD;
+    /* border:1px solid #00BBDD; */
+
+    border-radius: 6px 6px 6px 6px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.down-box-hover .down-box-select{
+    border-top:1px solid #00BBDD;
+    border-radius: 6px 0 0 0;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+    padding-left: 9px;
+}
+.down-box-hover ul {
+    display: block;
+    border-right: 1px solid #00BBDD;
+    border-radius: 0 0 6px 0;
+    position: relative;
+}
+
+::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+    color: #999;
+}
+
+::-moz-placeholder {  /* Firefox */
+    color: #999;
+}
+
+:-ms-input-placeholder { /* IE10–11 */
+    color: #999 !important;
+}
+
+::-ms-input-placeholder { /* Edge */
+    color: #999;
+}
+/* 顶部输入框end */
+#main{
+    min-height : calc(100% - 152px);
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+main {
+    /* padding: 0 20px; */
+    flex: 1;
+    background: #fff;
+}
+html, body {
+    height:100%;
+}
+/* 顶部tab栏start */
+.main-top {
+    height: 46px;
+    display: flex;
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0 20px;
+    background: #fff;
+    align-items: center;
+    box-sizing: border-box;
+}
+.main-top .t-tab {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-top .t-tab span {
+    cursor: pointer;
+}
+.main-top .t-tab span.t-tab-active {
+    color: #00BBDD;
+    position: relative;
+}
+.main-top .t-tab span.t-tab-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 64px;
+    height: 4px;
+    background-color: #00BBDD;
+    border-radius: 3px;
+}
+.main-top .t-tab span+span {
+    margin-left: 20px;
+}
+.main-top .t-btn {
+    margin-left: auto;
+    width: 80px;
+    height: 26px;
+    border: 1px solid #666;
+    font-size: 14px;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    line-height: 26px;
+    cursor: pointer;
+    color: #333;
+    box-sizing: border-box;
+}
+.main-top .t-btn:hover {
+    opacity: 0.7;
+    color: #00BBDD;
+    border-color: #00BBDD;
+    background: rgba(0,187,221,0.10);
+
+}
+.main-top .t-btn:active { 
+    background-color: rgba(0, 0, 0, 0.05);
+    opacity: 0.7;
+    color: #00BBDD;
+    border-color: #00BBDD;
+}
+.main-top .t-btn-disable {
+    border: 1px solid #E1E1E1!important;
+    color: #CCCCCC!important;
+    opacity: 1!important;
+    cursor: not-allowed!important;
+    background-color: #fff!important;
+}
+#footer {
+    height: 69px;
+}
+/* 顶部tab栏end */
+ 
+/* 课程列表start */
+.main-con {
+    box-sizing: border-box;
+}
+.main-con .subject-list {background: #F4F4F4;}
+.main-con .subject-list .subject-item {margin-bottom: 10px;background: #fff;}
+.main-con .subject-list .subject-item .item-name {
+    height: 62px;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 18px;
+    color: #333333;
+    line-height: 75px;
+    font-weight: 700;
+    margin: 0 20px;
+    display: flex;
+}
+.main-con .subject-list .subject-item .item-name-con {
+    width: 76%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.main-con .link-open-source,
+.main-con .link-open-source-manage {
+    color:#00BBDD;
+    font-weight:normal;
+    cursor:pointer;
+    font-size:14px;
+    margin-left: auto;
+}
+.main-con .link-open-source-manage {
+    margin-left: 0;
+}
+.main-con .link-open-source-gap {
+    color:#00BBDD;
+}
+
+.main-con .subject-list .subject-item .item-name-collapse {
+    margin-left: auto;
+    font-size: 14px;
+    color: #333333;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+    display: none;
+}
+.main-con .subject-list .subject-item .item-name-collapse img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 3px;
+    top: 1px;
+}
+.main-con .class-list {
+    padding: 10px;
+    background: #fff;
+}
+.main-con .class-list >ul >li {
+}
+.main-con .class-item {
+    width: 220px;
+    height: 316px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 6px 6px 8px 8px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin: 10px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);
+    /* 兼容 border-radius */
+    transform: rotate(0deg);
+    -webkit-transform:rotate(0deg);
+}
+.main-con .class-item:hover {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.16);
+}
+.main-con .class-item-complete .class-img-con::before {
+    content: '';
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(0,0,0,0.41);
+    background-image: url(../../common/images/index_creat_icon_end.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100px 100px;
+}
+.main-con .class-item-copy .class-img-con::before { 
+    content: '';
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(0,0,0,0.41);
+    background-image: url(../../common/images/index_creat_icon_copy.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100px 100px;
+}
+.class-item-copy .class-info span {
+    color:  #999999 !important;
+}
+.main-con .class-item-complete .img-btn {
+    display: none!important;
+}
+.main-con .class-item-copy .img-btn {
+    display: none!important;
+}
+.class-info-name-span{
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-flex';
+}
+li.class-item {}
+.main-con .class-item[data-is-term="N"] {
+    display: none;
+}
+.main-con .class-item:nth-child(4n) {
+    /* margin-right: 0; */
+}
+.main-con .class-img-con {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+}
+.main-con .class-img-con img.class-pic {
+    width: 100%;
+    height: 100%;
+}
+.main-con .class-img-con img.class-my {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main-con .class-item-complete img.class-pic{
+    animation: none!important;
+}
+.main-con .class-item-copy img.class-pic{
+    animation: none!important;
+}
+
+.main-con .class-item:hover .img-btn {
+    display: flex!important;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    opacity: 1;
+}
+.main-con .class-item-complete:hover .img-btn {
+    opacity: 0;
+}
+.main-con .class-item-copy:hover .img-btn {
+    opacity: 0;
+}
+.main-con .class-item:hover .class-img-con img {
+    animation: pic 4s linear forwards;
+    animation-play-state: paused;
+}
+.main-con .class-item img.class-pic:hover {
+    animation-play-state: running;
+}
+
+/* 
+根据分析 safari 浏览器 当 img-btn display=block 如果有 animation animation-play-state:paused 会自动定位到动画结束
+所以使用 opacity
+ */
+.main-con .img-btn {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0,0.68);
+    background-size: 100% 100%;
+    color: #fff;
+    align-items: center;
+    font-family: MicrosoftYaHei;
+}
+@keyframes pic {
+    0% { 
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+
+.main-con .img-btn button {
+    font-size: 13px;
+    width: 94px;
+    height: 26px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 13px;
+    color: #fff;
+    border:1px solid #fff;
+    box-sizing: border-box;
+}
+.main-con .class-img-con .img-btn button:hover {
+    opacity: 0.7;
+} 
+
+.main-con .class-info {
+    font-family: MicrosoftYaHei;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.main-con .class-info >span {
+    /* display: flex; */
+    align-items: center;
+}
+.my-create .class-info >span:nth-child(1),
+.my-create-search .class-info >span:nth-child(1),
+.my-team .class-info >span:nth-child(1),
+.my-team-search .class-info >span:nth-child(1) {
+    font-size: 16px;
+    color: #333333;
+    margin: 10px 0 8px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 20px;
+    padding-right: 10px;
+}
+.my-team .class-info-name,
+.my-team-search .class-info-name {
+    display: flex!important;
+}
+
+.my-team .class-info .class-info-name-con,
+.my-team-search .class-info .class-info-name-con {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 154px;
+}
+.my-create .class-info >span:nth-child(2),
+.my-create-search .class-info >span:nth-child(2),
+.my-team .class-info >span:nth-child(2),
+.my-team-search .class-info >span:nth-child(2) {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+    height: 18px;
+}
+.my-create .class-info >span:nth-child(2) span,
+.my-create-search .class-info >span:nth-child(2) span,
+.my-team .class-info >span:nth-child(2) span,
+.my-team-search .class-info >span:nth-child(2) span {
+    font-size: 14px;
+    color:#00BBDD;
+    /* margin-top: 4px; */
+}
+.my-create-search .show-btn,
+.my-create-search .slide-upm
+.my-team-search .show-btn,
+.my-team-search .slide-up {
+    display: none!important;
+}
+.main-con .class-info >span:nth-child(3) {
+    font-size: 14px;
+    color: #999999;
+    height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-flex;
+}
+.main-con .class-info >span:nth-child(3) span:nth-child(1) {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main-con .class-info >span:nth-child(3) span:nth-child(2) {
+    margin-left: auto;
+    color: #00BBDD;
+    min-width: 45px;
+    width: 45px;
+    position: relative;
+    margin-right: 5px;
+}
+.main-con .class-info >span:nth-child(3) span:nth-child(3) {
+    margin-left: auto;
+    color: #00BBDD;
+    min-width: 45px;
+    width: 45px;
+    position: relative;
+    margin-right: 5px;
+}
+.main-con .class-info >span:nth-child(3) span i {
+    font-size: 19px;
+    position: relative;
+    top: 0px;
+    margin-left: 2px;
+    float: right;
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    right: 0px;
+}
+.main-con .open-more,
+.main-con .close-other {
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #e1e1e1;
+    cursor: pointer;
+    margin: 0 20px;
+}
+.main-con .open-more:hover,
+.main-con .close-other:hover {
+    color: #00BBDD;
+}
+.main-con .open-more {
+    background-image: url(../../common/images/index_creat_icon_open.png);
+    background-repeat: no-repeat;
+    background-position: 537px center;
+    background-size: 30px 30px;
+}
+.main-con .open-more:hover {
+    background-image: url(../../common/images/index_creat_icon_open_hover.png);
+}
+.main-con .close-other {
+    display: none;
+    text-decoration: none;
+}
+.main-con .close-other i::before {
+    font-size: 18px;
+    margin-left: 8px;
+}
+.main-con .open-more img{
+    width: 30px;
+    height: 30px;
+    margin-left: 7px;
+}
+.main-con .class-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main-con .class-list ul::after{
+    content: "";
+    flex: auto;
+    /* min-width: 220px; */
+ }
+.my-join .tea-pic,
+.my-join-search .tea-pic {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 10px;
+    bottom: 63px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.my-join .class-info,
+.my-join-search .class-info {
+    position: relative;
+}
+.my-join .class-info >span:nth-child(1),
+.my-join-search .class-info >span:nth-child(1) {
+    margin-left: 76px;
+    font-size: 14px;
+    color: #666666;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    padding-right: 10px;
+}
+.my-join .class-info >span:nth-child(2),
+.my-join-search .class-info >span:nth-child(2) {
+    margin-bottom: 7px;
+    height: 19px;
+    font-size: 16px;
+    color: #333333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    line-height: 18px;
+    /* padding-top: 5px; */
+    padding-right: 10px;
+}
+.my-join .class-info >span:nth-child(2) span,
+.my-join-search .class-info >span:nth-child(2) span {
+    font-size: 14px;
+    color:#00BBDD;
+}
+.my-create-search,
+.my-join-search {
+    display: none;
+}
+.list-null {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+    background: #fff;
+}
+.list-null img {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-bottom: 4px;
+}
+.list-null p:nth-child(2){
+    font-size: 16px;
+    color: #333333;
+    font-weight: 700;
+}
+.list-null p:nth-child(3) {
+    font-size: 14px;
+    color: #999999;
+    margin: 12px 0;
+}
+.list-null button {
+    border-radius: 18px;
+    border: 1px solid #00BBDD;
+    color:#00BBDD;
+    width: 96px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.list-null button:hover {
+    opacity: 0.7;
+}
+.my-join-search .subject-list{
+    background-color: #fff;
+}
+/* 课程列表end */
+
+/* 调序弹窗start */
+.pop-sort {
+    width: 760px;
+}
+.pop-sort-subject li,
+.pop-sort-team li {
+    height: 66px;
+    padding-left: 20px;
+    padding-right: 40px;
+    /* display: flex; */
+    align-items: center;
+    font-size: 16px;
+    color: #333333;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: relative;
+    line-height: 66px;
+    border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+.pop-sort-subject li:hover,
+.pop-sort-team li:hover {
+    border: 1px solid #00BBDD;
+}
+.pop-sort-class li:active,
+.pop-sort-subject li:active,
+.pop-sort-team li:active{
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1!important;
+}
+.pop-sort-subject li+li,
+.pop-sort-team li+li {
+    border-top: 1px solid #eee;
+}
+.pop-sort >ul{
+    max-height: 495px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.pop-sort li .sort-icon {
+    margin-left: auto;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.layer-sort {
+    width: auto!important;
+    height: auto!important;
+    border-radius: 6px;
+    z-index: 1111!important;
+}
+.layer-sort .layui-layer-shade{
+    background: rgba(000,000,000,0.4);
+    opacity: 0.4!important;
+}
+.layer-sort .layui-layer-title {
+    height: 66px;
+    line-height: 66px;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #333333;
+    padding-left: 20px;
+    border-radius: 3px 3px 0 0;
+    background: #eee;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.layer-sort .layui-layer-dialog .layui-layer-content {
+    margin-bottom: 30px;
+    font-size: 12px;
+    color: #333;
+    line-height: 21px;
+    word-break: break-all;
+}
+.layer-sort .layui-layer-btn a{
+    width: 80px;
+    height: 32px;
+    box-sizing: border-box;
+    float: right;
+    border: 1px solid #0BD;
+    color: #0BD;
+    padding: 0 22px;
+    background: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.layer-sort .layui-layer-dialog .layui-layer-content{
+    margin-bottom: 0;
+}
+.layer-sort .layui-layer-dialog{
+    border-radius: 3px;
+}
+
+.layer-sort .layui-layer-close {
+    width: 41px;
+    height: 50px;
+    display: inline-block;
+    background-image: url(../../common/images/index_order_icon_close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 38px;
+}
+.layer-sort .layui-layer-close:hover{
+    background-position: center;
+}
+/* .layer-sort .layui-layer-close::before {
+    content: "\f00d";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    left: -4px;
+    font-size: 25px;
+} */
+.blue-background-class{
+    opacity: 1!important;
+    background: #fff!important;
+}
+.pop-sort-btn {
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+.pop-sort-btn button {
+    width: 70px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    border-radius: 17px;
+    border: none;
+    font-size: 16px;
+}
+.pop-sort-btn button:hover {
+    opacity: 0.7;
+}
+button.sort-cancel {
+    color: #666;
+    border: 1px solid #666;
+    margin-right: 26px;
+}
+button.sort-ok {
+    color: #00BBDD;
+    border: 1px solid #00BBDD;
+}
+.pop-sort-class li {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    box-sizing: border-box;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.pop-sort-class li:hover {
+    border: 1px solid #00BBDD;
+    height: 68px;
+}
+.pop-sort-class li+li {
+    border-top: 1px solid #eee;
+}
+.pop-sort-class li .sort-class-pic {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #CCCCCC;
+}
+.pop-sort-class li .sort-class-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+    height: 100%;
+} 
+.pop-sort-class li .sort-class-info >span:nth-child(1) {
+    font-size: 16px;
+    color: #333333;
+    width: 632px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px 0 8px;
+    line-height: 20px;
+}
+.pop-sort-class li .sort-class-info >span:nth-child(2) {
+    font-size: 14px;
+    color: #666666;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+}
+.pop-sort-class li .sort-class-info >span:nth-child(2) >span+span {
+    color: #999999;
+    margin-left: 20px;
+}
+.pop-sort-class li .sort-class-info >span:nth-child(2) >span {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.blue-background-class::before {
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 90;
+}
+.layer-tip-complete {
+    /* transition: auto; */
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.14);
+    margin-left: -28px;
+}
+.layer-tip-complete .layui-layer-content {
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #333333;
+    line-height: 16px;
+    height: 32px;
+    box-sizing: border-box;
+    line-height: 32px;
+    padding: 0 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.14);
+} 
+.layer-tip-complete.layui-layer-tips i.layui-layer-TipsT {
+    margin-left: 48px;
+}
+/* icon-remove */
+/* 调序弹窗end */
+* {
+    font-family: "微软雅黑";
+
+}
+.hover-found-box-plus {
+    background-image: url(../images/bg2.png?t=20191120);
+    width: 177px;
+    height: 154px;
+    top: 36px;
+}
+.hover-found-box-plus #add-join-cc {
+    padding-left: 10px;
+    padding-right: 9px;
+    padding-top: 11px;
+}
+.hover-found-box-plus #add-join-cc a{
+    font-size: 18px;
+    color: #333333;
+    height: 44px;
+    line-height: 44px;
+}
+.success-tips {
+    z-index: 9999;
+}
+textarea {
+    padding-right: 10px;
+}
+.iden-flag {
+    margin-left: 4px;
+    font-size: 14px;
+    align-items: center;
+    height: 22px;
+    padding: 0 4px;
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+}
+.iden-teamteacher {
+    background-color: #FFF4E6;
+    color: #FF9000;
+}
+.iden-supervise {
+    color: #0bd;
+    background-color: #E9FCFF;
+}
+.class-item[data-iden="supervise"] .class-img-con .img-btn{
+    display: none!important;
+}
+.my-team-search .list-null {
+    padding-bottom: 38px;
+}
+.down-box ul li {
+    text-align: center;
+}
+.cc-status-forbid {
+    margin-right: 35px;
+}
+.power-d-con {
+    color: #333;
+    padding-left: 60px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+.class-null-student {
+    padding-bottom: 40px;
+}
+.my-join .list-null button {
+}
+.my-create-search-null {
+    padding-bottom: 38px;
+}
+.my-create .class-null-student {
+    padding-bottom: 50px;
+}
+.my-team .list-null {
+    padding-bottom: 50px;
+}
+.my-join-search .my-create-search-null  {
+    padding-bottom: 28px;
+}
+.my-create .my-create-null {
+    padding-bottom: 50px;
+}
+.my-team .list-null .my-create-null-p2 {
+    font-size: 14px;
+    color: #999999;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+.my-team .list-null .my-create-null-p3 {
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 12px;
+}
+.my-team .p-dark {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 700;
+    line-height: 20px;
+}
+.my-team .list-null p {
+    width: 304px;
+}
+.layui-layer-shade {
+    z-index: 1000!important;
+}
+
+
+/* 来自于 MQP 的资源、活动的小标记 */
+.class-item .class-info .mqp {
+    /* display: inline-block;
+    width: 50px;
+    font-size: 14px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    color:#fff !important;
+    background-color: rgb(48, 63, 159);
+    border-radius: 4px;
+    margin-left: 10px; */
+}
+
+.class-info-num {
+    display: flex;
+}
+
+.mqp {
+    display:inline-block;
+    margin-right: 4px;
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+    background: url("../images/mqp-icon-web@2x.png") no-repeat;
+    background-size: cover;
+}
+
+/* 公开课标记 */
+.public-course {
+    display: flex;
+    width: 62px;
+    height: 20px;
+    background: rgba(0,187,221,0.10);
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.public-course div:nth-child(1) {
+    height: 14px;
+    width: 14px;
+    background: url("../images/icon_public_course.png") no-repeat;
+    background-size: cover;
+}
+
+.public-course div:nth-child(2) {
+    font-size: 12px;
+    color: #00BBDD;
+    line-height: 15px;
+    font-weight: bolder;
+    margin-left: 4px;
+}

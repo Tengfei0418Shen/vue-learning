@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=980, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>云班课 - 我的班课</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="stylesheet" href="./css/font-win.css" />
+    <link rel="stylesheet" href="./css/layer.css" />
+
+    <link rel="stylesheet" href="./css/cc-list.css" />
+    <link rel="stylesheet" href="./css/cpp-login.css" />
+    <title>云班课 - 用户注册</title>
+    <link
+      rel="icon"
+      href="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header id="header-box">
+        <div class="header-main">
+          <a
+            href="https://www.mosoteach.cn/web/index.php?c=clazzcourse&m=index"
+            class="logo"
+          ></a>
+          <div class="information-box">
+            <!--<div class="extension-library left-float">
+                    <a href="http://sync.cctr.net.cn/" target="_blank" id="extension-library">外部资源库</a>
+                </div>
+                <div class="left-float vertical-bar"></div>-->
+            <!-- <div class="left-float">
+                    <a href="">公开课</a>
+                </div> -->
+            <div class="ccp left-float">
+              <a
+                href="https://www.mosoteach.cn/web/index.php?c=public_course&m=index"
+                id="public-course-button"
+                >公开课</a
+              >
+            </div>
+
+            <div class="left-float vertical-bar"></div>
+
+            <div class="left-float">
+              <a
+                href="https://www.mosoteach.cn/web/index.php?c=task&m=index"
+                id="task-center-button"
+                >任务中心</a
+              >
+            </div>
+
+            <div class="left-float vertical-bar"></div>
+
+            <div class="ccp left-float">
+              <a
+                href="https://www.mosoteach.cn/web/index.php?c=ccp&m=index"
+                id="ccp-button"
+                >教学包</a
+              >
+            </div>
+
+            <div class="left-float vertical-bar"></div>
+
+            <div class="library-manager left-float">
+              <a
+                href="https://www.mosoteach.cn/web/index.php?c=library_manager&m=index"
+                id="library-manager-button"
+                >库管理</a
+              >
+            </div>
+
+            <div class="left-float vertical-bar"></div>
+
+            <div class="my-quiz left-float">
+              <a
+                id="my-quiz-button"
+                href="https://www.mosoteach.cn/web/index.php?c=quiz"
+                >我的题库</a
+              >
+            </div>
+
+            <div class="left-float vertical-bar"></div>
+
+            <div class="left-float">
+              <!--                        判断是否登陆-->
+              <a
+                id="throwing_screen_button"
+                href="https://www.mosoteach.cn/web/index.php?c=throwing_screen&m=screen_entry"
+                target="_blank"
+                >手机投屏</a
+              >
+            </div>
+
+            <div class="left-float vertical-bar"></div>
+
+            <!--<div class="news-box left-float color-66" data-hidden="N">
+                    <i class="icon-bell" style="font-size:20px;"></i>
+                    <span id="news-button" class="color-33">信息</span>
+                    <div class="news-num">6</div>
+                </div>
+                <div class="left-float vertical-bar"></div>
+    -->
+
+            <div class="user-information-box left-float" style="height: 50px">
+              <a
+                href="https://www.mosoteach.cn/web/index.php?c=user&m=account_information"
+                style="
+                  display: inline-block;
+                  vertical-align: top;
+                  line-height: 50px;
+                "
+              >
+                <img
+                  alt=""
+                  src="https://static-cdn-oss.mosoteach.cn/mssvc/default-avatar@2x.png?x-oss-process=style/s200x200"
+                  width="30"
+                  class="user-photo"
+                />
+                <div
+                  class="out-hide"
+                  style="
+                    margin: 0 10px;
+                    max-width: 70px;
+                    vertical-align: middle;
+                  "
+                >
+                  申腾飞
+                </div>
+              </a>
+              <a
+                id="moso-quit"
+                href="https://www.mosoteach.cn/web/index.php?c=user&m=logout"
+                >退出</a
+              >
+              <a
+                href="http://help.mosoteach.cn"
+                target="_blank"
+                style="margin-left: 12px"
+                >帮助</a
+              >
+            </div>
+          </div>
+          <div class="new-information-box">
+            <img
+              src="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/square-up.png"
+              alt="my quiz"
+            />
+            <div class="new-information">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div id="view-all"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- <style>
+        .top-warning {
+            display: flex;
+            /* position: absolute; */
+            /* top: 0; */
+            /* left: 0; */
+            width: 100%;
+            font-size: 24px;
+            color: #FFFFFF;
+            text-align: center;
+            font-weight: 700;
+            background: #FF9900;
+            min-height: 50px;
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            animation: breath 0.6s linear 0s infinite alternate;
+        }
+
+        @keyframes breath {
+            from {
+                background: #FF9900;
+            }
+            to {
+                background: #FF6600;
+            }
+        }
+
+        .top-warning a {
+            padding-left: 15px;
+            color: #FFFFFF;
+        }
+    </style> -->
+      <section id="main">
+        <div class="main-head-box">
+          <div class="found-icon" data-hidden="N"></div>
+          <div class="hover-found-box">
+            <div id="add-join-cc">
+              <a
+                href="https://www.mosoteach.cn/web/index.php?c=clazzcourse&m=create_clazzcourse"
+                data-type="create"
+                >创建班课</a
+              >
+              <a
+                href="https://www.mosoteach.cn/web/index.php?c=clazzcourse&m=join_clazzcourse_view"
+                data-type="join"
+                >加入班课</a
+              >
+            </div>
+          </div>
+          <div class="search-box" style="overflow: visible">
+            <input
+              type="text"
+              name="search"
+              placeholder=""
+              class="search-input"
+              autocomplete="off"
+            />
+            <!-- <img class="search-box-close" src="common/images/index_search_icon_close.png" alt=""> -->
+            <div class="down-box">
+              <div class="down-box-select" data-type="join">我加入的</div>
+              <ul>
+                <li class="" data-type="create">我创建的</li>
+                <li class="hide" data-type="join">我加入的</li>
+              </ul>
+            </div>
+            <div class="search-history"></div>
+          </div>
+        </div>
+
+        <main>
+          <!-- 顶部tab栏start -->
+          <section class="main-top">
+            <div class="t-tab">
+              <span data-type="create">我创建的</span>
+              <span data-type="join">我加入的</span>
+            </div>
+            <div class="t-btn" data-type="join">班课调序</div>
+          </section>
+          <!-- 顶部tab栏end -->
+
+          <!-- 课程列表start -->
+          <section class="main-con">
+            <!-- 我创建的 -->
+            <div class="my-create">
+              <ul class="subject-list" data-is-loaded="N"></ul>
+
+              <!-- 教师身份 我创建的班课列表 为空 -->
+              <div class="my-create-null list-null" data-type="T">
+                <!-- <img src="common/images/index_create_pic_teacher.png" alt=""> -->
+                <p class="my-create-null-p1">
+                  还没有已创建的班课，快去创建一个吧～
+                </p>
+                <p class="my-create-null-p2">
+                  创建班课后可以在班课内上传各种学习资源、创建多样化的教学活动等
+                </p>
+                <button
+                  data-type="create"
+                  type="button"
+                  data-url="https://www.mosoteach.cn/web/index.php?c=clazzcourse&m=create_clazzcourse"
+                >
+                  创建班课
+                </button>
+              </div>
+
+              <!-- 学生身份班课列表 创建 为空 -->
+              <div class="class-null-student list-null" data-type="S">
+                <!-- <img src="common/images/index_creat_pic_stu.png" alt=""> -->
+                <p>还没有创建的班课</p>
+              </div>
+            </div>
+
+            <!-- 我创建的 搜索页 -->
+            <div class="my-create-search">
+              <ul class="subject-list"></ul>
+
+              <!-- 教师身份 搜索结果 为空  -->
+              <div class="my-create-search-null list-null" data-type="T">
+                <!-- <img src="common/images/index_search_pic_teacher.png" alt=""> -->
+                <p>未搜索到相关班课</p>
+                <p>试试其他关键词呢</p>
+              </div>
+
+              <!-- 学生身份 搜索结果 为空 -->
+              <!-- <div class="class-null-student list-null" data-type="S">
+                        <img src="common/images/index_search_pic_stu.png" alt="">
+                        <p>未搜索到相关班课</p>
+                        <p>试试其他关键词呢</p>
+                    </div> -->
+            </div>
+
+            <div class="123">123</div>
+
+            <!-- 我加入的 -->
+            <div class="my-join class-list">
+              <ul data-is-loaded="Y">
+                <li
+                  class="class-item"
+                  data-url="https://www.mosoteach.cn/web/index.php?c=interaction&amp;m=index&amp;clazz_course_id=9CFB7F54-F7E8-461E-A75D-460169F40FF7"
+                  data-id="9CFB7F54-F7E8-461E-A75D-460169F40FF7"
+                  v-for="(article,index) in articles"
+                  :key="article.id"
+                >
+                  <div class="class-img-con">
+                    <img class="class-pic" src="imgs/1.png" alt="" />
+                  </div>
+                  <div class="class-info">
+                    <span class="class-info-teacher" title="article.author"
+                      >{{ article.author }}<img
+                        class="tea-pic"
+                        src="imgs/2.png"
+                        alt=""
+                    /></span>
+                    <span class="class-info-subject" title="article.title"
+                      >{{article.title}}</span
+                    >
+                    <span class="class-info-name"
+                      ><div
+                        class="class-info-name-span"
+                        title="article.createTime"
+                      >
+                        {{article.createTime}}
+                      </div>
+                      <span
+                        >进入 >
+                        <!--                                    <i class="icon-angle-right "></i>-->
+                      </span></span
+                    >
+                  </div>
+                </li>
+              </ul>
+
+              <!-- 班课列表 加入 为空 -->
+              <div class="class-null-student list-null">
+                <!-- <img src="common/images/index_join_pic_stu.png" alt=""> -->
+                <p>还没有已加入的班课，快去加入一个吧～</p>
+                <p>加入班课后可以随时随地学习资源、参与活动</p>
+                <button
+                  data-type="join"
+                  type="button"
+                  data-url="https://www.mosoteach.cn/web/index.php?c=clazzcourse&m=join_clazzcourse_view"
+                >
+                  加入班课
+                </button>
+              </div>
+            </div>
+
+            <!-- 我加入的 搜索页 -->
+            <div class="my-join-search class-list">
+              <ul class="subject-list"></ul>
+
+              <!-- 教师身份 搜索结果 为空  -->
+              <!-- <div class="my-create-search-null list-null" data-type="T">
+                        <img src="common/images/index_search_pic_teacher.png" alt="">
+                        <p>未搜索到相关班课</p>
+                        <p>试试其他关键词呢</p>
+                    </div> -->
+
+              <!-- 学生身份 搜索结果 为空 -->
+              <div class="my-create-search-null list-null" data-type="T">
+                <!-- <img src="common/images/index_search_pic_teacher.png" alt=""> -->
+                <p>未搜索到相关班课</p>
+                <p>试试其他关键词呢</p>
+              </div>
+            </div>
+
+            <!-- 我共建的 -->
+            <div class="my-team">
+              <ul class="subject-list" data-is-loaded="N"></ul>
+
+              <!-- 我共建的 为空 -->
+              <div class="my-create-null list-null" data-type="T">
+                <!-- <img src="common/images/index_create_pic_teacher.png" alt=""> -->
+                <p class="p-dark">如何与其他老师共建班课，开展团队教学？</p>
+                <p class="my-create-null-p2">
+                  第一步：输入班课号加入班课<br />第二步：让创建班课的老师将你设置为团队老师
+                </p>
+                <p class="p-dark">如何观摩班课？</p>
+                <p class="my-create-null-p2">
+                  第一步：输入班课号加入班课<br />第二步：让创建班课的老师将你设置为观摩者
+                </p>
+                <button
+                  data-type="join"
+                  type="button"
+                  data-url="https://www.mosoteach.cn/web/index.php?c=clazzcourse&m=join_clazzcourse_view"
+                >
+                  加入班课
+                </button>
+              </div>
+            </div>
+
+            <!-- 我共建的 搜索 -->
+            <div class="my-team-search">
+              <ul class="subject-list"></ul>
+
+              <!-- 团队教师 搜索结果 为空 -->
+              <div class="class-null-student list-null" data-type="S">
+                <!-- <img src="common/images/index_search_pic_teacher.png" alt=""> -->
+                <p>未搜索到相关班课</p>
+                <p>试试其他关键词呢</p>
+              </div>
+            </div>
+          </section>
+          <!-- 课程列表end -->
+
+          <!-- 课程调序弹窗 -->
+          <section class="pop-sort pop-sort-subject" style="display: none">
+            <ul></ul>
+
+            <!--                <div class="pop-sort-btn">-->
+            <!--                    <button class="sort-cancel" type="button">取消</button>-->
+            <!--                    <button class="sort-ok" type="button" data-type="subject">确定</button>-->
+            <!--                </div>-->
+          </section>
+
+          <!-- 班课调序弹窗 -->
+          <section class="pop-sort pop-sort-class">
+            <ul>
+              <!-- <li data-id="C01D9F47-37A4-4597-9337-96F2DE9EB6DF">
+                        <img class="sort-class-pic"
+                             src="https://public-cdn-oss.mosoteach.cn/mssvc/cover/2022/03/4dcb9b4ece5e3e700802bbdc6dfe9f89.jpeg?x-oss-process=style/s200x200"
+                             alt="" onerror="imgError(this)">
+                        <div class="sort-class-info">
+                            <span>前端工程化开发</span>
+                            <span><span>许莫淇</span> <span>软件2176Web虚拟3班</span></span>
+                        </div>
+                        <img class="sort-icon" src="common/images/groups-icon-move-normal.png" alt="">
+                    </li> -->
+            </ul>
+
+            <!--                <div class="pop-sort-btn">-->
+            <!--                    <button class="sort-cancel" type="button">取消</button>-->
+            <!--                    <button class="sort-ok" type="button" data-type="class">确定</button>-->
+            <!--                </div>-->
+          </section>
+
+          <!-- 团队教师弹窗 -->
+          <section class="pop-sort pop-sort-team" style="display: none">
+            <ul></ul>
+
+            <!--                <div class="pop-sort-btn">-->
+            <!--                    <button class="sort-cancel" type="button">取消</button>-->
+            <!--                    <button class="sort-ok" type="button" data-type="class">确定</button>-->
+            <!--                </div>-->
+          </section>
+        </main>
+      </section>
+
+      <!-- 选择身份 start -->
+      <div class="select-role-bg modal">
+        <div class="select-role-box">
+          <div class="select-role-title">
+            <span class="title-content">选择进入班课角色</span>
+          </div>
+          <div class="select-role-content">
+            <div class="msg-content">
+              以不同的身份进入班课，所拥有的操作权限不同。
+            </div>
+            <div class="tips-button-box">
+              <button class="button-routine button-sure select-role-student">
+                以学生角色进入班课
+              </button>
+              <button class="button-routine button-sure select-role-teacher">
+                以助教角色进入班课
+              </button>
+              <button
+                class="button-routine ordinary select-role-cancel"
+                type="normal"
+              >
+                取消
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 选择身份 end -->
+
+      <!-- 弹窗提示 start -->
+      <div class="pop-tips-box" style="/*display:block;*/">
+        <div class="samll-tips-box pop-iden">
+          <div class="msg-title">
+            <span class="title-content"></span>
+          </div>
+          <div class="msg-content-box">
+            <div class="msg-content">
+              <div class="pop-iden-tab">
+                <div data-type="T" class="iden-tab tea-tab">
+                  <span>我是老师</span>
+                  <img src="" alt="" />
+                </div>
+
+                <div data-type="S" class="iden-tab stu-tab">
+                  <span>我是学生</span>
+                  <img src="" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!--                <div class="tips-button-box">-->
+            <!--                    <button class="button-routine ordinary tips-cancel" type="normal" style="margin-left:0px;">取消-->
+            <!--                    </button>-->
+            <!--                    <button class="button-routine tips-ok tips-ok-disable">确定</button>-->
+            <!--                </div>-->
+          </div>
+        </div>
+      </div>
+      <!-- 弹窗提示 end -->
+
+      <!-- toast -->
+      <div class="success-tips">
+        <div class="success-tips-icon"></div>
+        <span class="success-tips-msg"></span>
+      </div>
+
+      <!-- 当 Ajax 异步加载的时候需要显示加载图标。请使用公共的 showLoading 和  hideLoading JS 函数-->
+      <div id="shade-box"></div>
+      <div id="close-loading" onclick="closeLoading()"></div>
+      <div id="loading_bg"></div>
+      <img
+        id="loading"
+        src="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/loading.gif"
+        alt="loading"
+      />
+
+      <div id="footer" style="padding-top: 12px; color: #333">
+        <div>
+          <span style="font-family: Verdana, Tahoma, Arial; display: block">
+            地址：北京市海淀区上地东路 35 号颐泉汇写字楼 316 室
+            &nbsp;&nbsp;&nbsp;&nbsp;联系电话：400-008-1078
+          </span>
+        </div>
+      </div>
+
+      <!-- 教学包登录弹窗 start -->
+      <div class="pop" id="ccp-login-pop" style="display: none">
+        <div class="pop-shade"></div>
+        <div class="pop-box" id="login-ccp-box">
+          <div class="box-border">
+            <div id="login-button-box">
+              <div id="account-login-button" class="selected">账号密码登录</div>
+              <div id="phone-login-button">短信验证登录</div>
+              <div class="close-login-button"></div>
+            </div>
+
+            <div class="login-success">
+              <i class="icon-exclamation-sign"></i>
+              <span></span>
+            </div>
+
+            <div class="login-from">
+              <!-- 账号密码登录  start -->
+              <form class="account-from">
+                <input
+                  type="text"
+                  name="account_name"
+                  autocomplete="off"
+                  placeholder="请输入账号"
+                  id="account-name"
+                />
+                <input
+                  type="password"
+                  name="user_password"
+                  maxlength="16"
+                  autocomplete="off"
+                  placeholder="密码"
+                  id="user-pwd"
+                />
+                <div class="remember-me-box">
+                  <i
+                    id="account-login-remember-me"
+                    class="icon-check-empty auto-login"
+                    data-type="account"
+                    data-value="N"
+                  ></i>
+                  <span style="vertical-align: middle">30 天自动登录</span>
+                  <a
+                    class="forget-password"
+                    href="https://www.mosoteach.cn/web/index.php?c=passport&m=forget_password"
+                    >忘记密码？</a
+                  >
+                </div>
+                <div
+                  class="slider-box"
+                  data-status="N"
+                  style="margin-bottom: 25px; display: none"
+                >
+                  <div id="account-afs" class="nc-container"></div>
+                </div>
+                <button
+                  class="button-big"
+                  id="login-button-1"
+                  data-status="N"
+                  type="button"
+                  style="height: 40px"
+                >
+                  登录
+                </button>
+              </form>
+              <!-- 账号密码登录 end -->
+
+              <!-- 短信验证登录 start -->
+              <form class="phone-from">
+                <div class="phone-number-input">
+                  <i class="icon-mobile-phone icon-2x"></i>
+                  <input
+                    type="text"
+                    name="phone_number"
+                    maxlength="11"
+                    autocomplete="off"
+                    placeholder="手机号"
+                    id="phone-number"
+                  />
+                </div>
+                <div class="slider-box">
+                  <div id="phone-afs" class="nc-container"></div>
+                </div>
+                <div class="verify-box">
+                  <input
+                    type="text"
+                    name="verify_code"
+                    maxlength="20"
+                    autocomplete="off"
+                    placeholder="验证码"
+                    id="verify-code"
+                    style="margin-bottom: 0px"
+                  />
+                  <button
+                    id="get-verify-code"
+                    class="button-big disabled"
+                    disabled="disabled"
+                    data-status="N"
+                  >
+                    获取验证码
+                  </button>
+                </div>
+                <div class="remember-me-box" style="margin-bottom: 32px">
+                  <i
+                    id="phone-login-remember-me"
+                    class="icon-check-empty auto-login"
+                    data-type="phone"
+                    data-value="N"
+                  ></i>
+                  <span style="vertical-align: middle">30 天自动登录</span>
+                  <a
+                    class="forget-password"
+                    href="https://www.mosoteach.cn/web/index.php?c=passport&m=forget_password"
+                    >忘记密码？</a
+                  >
+                </div>
+                <button
+                  class="button-big"
+                  id="login-button-2"
+                  type="button"
+                  style="height: 40px"
+                >
+                  登录
+                </button>
+              </form>
+              <!-- 验证密码登录 end -->
+            </div>
+
+            <div class="forget-pwd-box">
+              <a
+                href="https://www.mosoteach.cn/web/index.php?c=passport&m=user_register"
+                target="_blank"
+                >注册蓝墨账号</a
+              >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a
+                href="https://sso.mosoteach.cn?action=login&appId=MTWEB&returnParam=ccp"
+                >学校账号密码登录</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="moso-cc-id" style="display: none"></div>
+      <div class="moso-act-id" style="display: none"></div>
+      <div class="moso-session" style="display: none">
+        https://www.mosoteach.cn/web/index.php?c=user&m=refresh_session
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          articles: [
+          ],
+        };
+      },
+      created() {
+        this.getAll();
+      },
+      methods: {
+        getAll() {
+          axios({
+            methed: "get",
+            url: "http://localhost:8080/api/v1/articles/all",
+          }).then((resp) => {
+            this.articles = resp.data.data;
+            console.log(this.articles.length);
+          });
+        },
+      },
+    });
+    const vm = app.mount("#app");
+  </script>
+</html>

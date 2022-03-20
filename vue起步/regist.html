@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./css/font-win.css">
+
+    <link rel="stylesheet" href="./css/passport.css">
+    <title>云班课 - 用户注册</title>
+    <link rel="icon" href="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/favicon.ico"
+          type="image/x-icon">
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <!-- header start -->
+    <div class="header">
+        <div class="logo-box">
+            <a href="https://www.mosoteach.cn/web/index.php?c=passport&m=index"><img
+                    src="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/logo-1.png?v=20190625"
+                    style="width:169px;height:40px;"></a>
+        </div>
+        <div class="help-box">
+            <a href="index.html">返回登录</a>
+            <span class="color-99" style="margin:0 10px;">|</span>
+            <a href="#" target="_blank" class="grey">帮助</a>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- main start -->
+    <div class="register-box">
+        <div id="information-box">
+            <div class="register-button-box phone-register">
+                <span>注册新账号</span>
+            </div>
+            <!-- phone box start -->
+            <div id="phone-register-box">
+
+                <div class="register-input-box">
+                    <span>账号</span>
+                    <input type="text" v-model="username" @input.lazy="username" maxlength="11" autocomplete="off"
+                           placeholder="输入用户名" id="" class="chack-input" data-register-type="phone">
+                    <div class="prompt-message phone-input">
+                        <i class="icon-exclamation-sign"></i>
+                        <span class="message-text"></span>
+                    </div>
+                </div>
+
+                <div class="slider-box" style="line-height:33px;">
+
+                </div>
+                <div class="register-input-box">
+                    <span>密码</span>
+                    <input type="password" v-model="password" @input.lazy="password" maxlength="11" autocomplete="off"
+                           placeholder="输入密码" id="" class="chack-input" data-register-type="phone">
+                    <div class="prompt-message phone-input">
+                        <!-- <i class="icon-exclamation-sign"></i> -->
+                        <span class="message-text">{{password}}</span>
+                    </div>
+                </div>
+                <div class="register-verify-box register-input-box" style="margin-bottom:20px;">
+                    <span>确认密码</span>
+                    <input type="password" v-model="repassword" @input.lazy="repassword" maxlength="20" autocomplete="off"
+                           placeholder="请确认密码" id="" style="width:177px;" class="chack-input"
+                           data-register-type="phone">
+                    <div class="prompt-message verify-input" :style="{'display':isSame}">
+                        <span class="message-text">{{message}}</span>
+                    </div>
+                </div>
+                <div class="agreement">
+                    <p><input type="checkbox" :checked="isAgree" data-status="Y" v-model="isAgree"></input>我已阅读并同意<a
+                            href="https://mi-static.oss-cn-hangzhou.aliyuncs.com/eula/eula_teach.html" target="_blank">《用户协议》</a>
+                    </p>
+                </div>
+                <button id="register-button-phone" class="button-big register-button" :class="{'disabled':!isAgree}"
+                        style="height:50px;" data-status="Y" @click="submit()">注册
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="pop-tips-box">
+        <div class="samll-tips-box">
+            <div class="msg-title">
+                <span class="title-content"></span>
+                <span class="close-tips-box">
+                    <img src="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/icon-close-normal.png"
+                         class="close-button">
+                </span>
+            </div>
+            <div class="msg-content-box">
+                <div class="msg-content"></div>
+                <div class="tips-button-box">
+                    <button class="button-routine tips-cancel" type="normal" style="margin-left:0px;">取消</button>
+                    <button class="button-routine tips-ok">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" style="padding-top: 12px;color: #333;">
+        <div>
+            <span style="font-family: Verdana, Tahoma, Arial; display: block;">
+                 地址：南京市栖霞区羊山北路 1 号筠竹苑 &nbsp;&nbsp;&nbsp;&nbsp;联系电话：xxx-xxx-xxxx
+            </span>
+        </div>
+
+    </div>
+    <div id="shade-box"></div>
+    <div id="close-loading"></div>
+    <div id="loading_bg"></div>
+    <img id="loading" src="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/loading.gif" alt="loading">
+</div>
+</body>
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                isAgree: true,
+                repassword: '',
+                password: '',
+                username: '',
+                isSame: 'none',
+                message: ''
+            }
+        },
+        updated() {
+            if(this.repassword!==this.password){
+                this.isSame = 'block';
+                this.message = "两次密码不一致";
+            }else{
+                this.isSame = 'none';
+                this.message = "";
+            }
+        },
+        methods: {
+            submit() {
+    
+                console.log("{username:"+this.username+",password:"+this.password+"}")
+                axios({
+                        methed: "post",
+                        url: "http://127.0.0.1:8088/regist",
+                        data: "{username:"+this.username+",password:"+this.password+"}"
+                    }
+                ).then(function (resp) {
+                    document.getElementById("info").innerHTML = resp.data
+                    window.localtion.href='index.html'
+                })
+            }
+        },
+    });
+    const vm = app.mount('#app');
+</script>
+
+
+</html>

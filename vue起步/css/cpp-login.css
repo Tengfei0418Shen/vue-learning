@@ -1,0 +1,237 @@
+/* 教学包登录弹窗 start */
+#ccp-login-pop .pop-shade {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.4;
+}
+
+#ccp-login-pop .pop-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -180px;
+    margin-top: -200px;
+}
+#ccp-login-pop .box-border {
+    float:right;
+    width:360px;
+    height:400px;
+    background:#FFF;
+    border-radius: 4px;
+    font-size:14px;
+}
+#ccp-login-pop #login-button-box {
+    width:100%;
+    height:50px;
+    overflow: hidden;
+    border-bottom: 1px solid #e1e1e1;
+}
+#ccp-login-pop .login-success{
+    display: none;
+    float:left;
+    padding: 17px 0 0 30px;
+    color:#FC4848;
+    font-size:14px;
+}
+#ccp-login-pop .login-success .icon-exclamation-sign {
+    font-size:16px;
+    margin-right: 5px;
+}
+#ccp-login-pop #account-login-button {
+    cursor:pointer;
+    text-align: center;
+    float:left;
+    width: 90px;
+    margin-left: 30px;
+    color:#999;
+    line-height: 48px;
+    border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+#ccp-login-pop #phone-login-button {
+    cursor:pointer;
+    text-align: center;
+    float:left;
+    width: 90px;
+    margin-left: 30px;
+    color:#999;
+    line-height: 48px;
+    border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+#ccp-login-pop #account-login-button.selected,
+#ccp-login-pop #phone-login-button.selected
+ {
+     color: #333;
+    border-bottom: 2px solid #0bd;
+}
+#ccp-login-pop .close-login-button {
+    float: right;
+    width: 50px;
+    height: 50px;
+    background:url(../images/ccp-user-guide_delate_icon@2x.png) no-repeat center center;
+    background-size:30%;
+    cursor: pointer;
+}
+#ccp-login-pop .login-from {
+    padding-top:40px;
+    width:300px;
+    margin:0 auto;
+}
+#ccp-login-pop .phone-from {
+    display:none;
+}
+#ccp-login-pop #account-name {
+    border:solid 1px #CCC;
+    width:251px;
+    height:38px;
+    font-size:14px;
+    padding-left: 42px;
+    padding-right:5px;
+    background-image:url('../images/icon_account.png');
+    background-repeat: no-repeat;
+    background-position:10px 10px;
+    margin-bottom:20px;
+}
+#ccp-login-pop #account-name:focus {
+    background-image:url('../images/icon_account-blue.png');
+    background-repeat: no-repeat;
+    background-position:10px 12px;
+    border:solid 1px #00BBDD;
+}
+#ccp-login-pop #user-pwd {
+    border:solid 1px #CCC;
+    width:251px;
+    height:38px;
+    font-size:14px;
+    padding-left: 42px;
+    padding-right:5px;
+    background-image:url('../images/icon-lock.png');
+    background-repeat: no-repeat;
+    background-position:10px 10px;
+    margin-bottom:20px;
+}
+#ccp-login-pop #user-pwd:focus {
+    background-image:url('../images/icon-lock-blue.png');
+    background-repeat: no-repeat;
+    background-position:10px 10px;
+    border-color:#00BBDD;
+}
+#ccp-login-pop .phone-number-input {
+    height:38px;
+    margin-bottom:20px;
+}
+#ccp-login-pop .phone-number-input .icon-mobile-phone {
+    position: absolute;
+    padding-top: 6px;
+    padding-left: 10px;
+    color:#999;
+}
+#ccp-login-pop #phone-number {
+    border:solid 1px #CCC;
+    width:263px;
+    height:38px;
+    font-size:14px;
+    padding-left: 30px;
+    padding-right: 5px;
+}
+#ccp-login-pop #phone-number:focus {
+    border-color:#00BBDD;
+}
+#ccp-login-pop .slider-box {
+    margin-bottom:15px;
+}
+#ccp-login-pop .verify-box {
+    margin-bottom:20px;
+    overflow: hidden;
+}
+#ccp-login-pop #verify-code {
+    width:170px;
+    height:38px;
+    border-color:#CCC;
+    font-size:14px;
+}
+#ccp-login-pop #verify-code:focus {
+    border-color:#00BBDD;
+}
+#ccp-login-pop #get-verify-code {
+    float:right;
+    width:110px;
+    height:40px;
+    padding:0px;
+}
+#ccp-login-pop .remember-me-box {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    color:#888;
+    margin-bottom:73px;
+}
+#ccp-login-pop .remember-me-box .auto-login {
+    cursor:pointer;
+    font-size:16px;
+    vertical-align: middle;
+}
+#ccp-login-pop .remember-me-box .forget-password {
+    float: right
+}
+#ccp-login-pop .icon-check{
+	display: inline-block;
+    color:#00BBDD;
+    width: 15px;
+}
+
+#ccp-login-pop .icon-check-empty{
+	display: inline-block;
+    width: 15px;
+}
+
+#ccp-login-pop #login-button-1, #login-button-2 {
+    width:300px;
+    margin-bottom:20px;
+}
+#ccp-login-pop .forget-pwd-box {
+    color: #0BD;
+    text-align: center;
+}
+/* 教学包登录弹窗 end */
+
+/*滑块验证样式*/
+._nc .stage1 {
+    height: 34px !important;
+    position: relative;
+}
+
+._nc .stage {
+    position: relative;
+    padding: 0 15px !important;
+}
+
+._nc .stage1 .slider {
+    position: absolute;
+    height: 34px !important;
+    box-shadow: 0 0 3px #999;
+    background-color: #ddd;
+    left: 0px !important;
+    right: 0px !important;
+}
+._nc .stage1 .track div, ._nc .stage1 .label {
+    line-height: 34px !important;
+    height: 34px !important;
+    text-align: center;
+    font-size: 16px;
+}
+._nc .stage1 .button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52px;
+    height: 34px !important;
+    background-color: #fff;
+    cursor: pointer;
+}
